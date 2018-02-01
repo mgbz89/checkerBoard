@@ -84,7 +84,7 @@ public class boardFXMLController implements Initializable, Startable {
     @Override
     public void start(Stage stage) {
         this.stage = stage;
-        checkerBoard = new CheckerBoard(size,size,stage.getWidth(), stage.getHeight() - menuBar.getHeight() * 2);
+        checkerBoard = new CheckerBoard(size,size,stage.getWidth(), stage.getHeight() - menuBar.getHeight() * 1.9);
         anchorPane.getChildren().add(checkerBoard.build());
         this.stage.widthProperty().addListener(lambdaChangeListener);
         this.stage.heightProperty().addListener(lambdaChangeListener);
@@ -95,9 +95,9 @@ public class boardFXMLController implements Initializable, Startable {
         System.out.println(stage.getHeight() - menuBar.getHeight());
         System.out.println(stage.getWidth());
         if(blue)
-            checkerBoard = new CheckerBoard(size,size, stage.getWidth(), stage.getHeight() - menuBar.getHeight() * 2, Color.SKYBLUE, Color.DARKBLUE);
+            checkerBoard = new CheckerBoard(size,size, stage.getWidth(), stage.getHeight() - menuBar.getHeight() * 1.9, Color.SKYBLUE, Color.DARKBLUE);
         else
-            checkerBoard = new CheckerBoard(size,size, stage.getWidth(), stage.getHeight() - menuBar.getHeight() * 2);
+            checkerBoard = new CheckerBoard(size,size, stage.getWidth(), stage.getHeight() - menuBar.getHeight() * 1.9);
         
         anchorPane.getChildren().add(checkerBoard.build());
     }
